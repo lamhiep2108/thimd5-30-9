@@ -1,0 +1,31 @@
+<div class="container">
+  <h2>Table Books</h2>
+  <p></p>
+  <button type="button" class="btn btn-success" routerLink="/create">Create</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Description</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let b of book">
+      <td>{{b.id}}</td>
+      <td>{{b.title}}</td>
+      <td>{{b.author}}</td>
+      <td>{{b.description}}</td>
+      <td>
+        <button type="button" class="btn btn-secondary" [routerLink]="['/edit/',b.id]">Edit</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-secondary" [routerLink]="['/delete/',b.id]">delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

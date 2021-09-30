@@ -1,0 +1,24 @@
+
+<div class="container">
+  <h1>delete Product</h1>
+
+  <form [formGroup]="bookForm">
+    <div class="form-group">
+      <label>Id</label>
+      <input type="number" class="form-control" formControlName="id" readonly>
+    </div>
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" class="form-control" formControlName="title">
+    </div>
+    <div class="form-group">
+      <label>Author:</label>
+      <input type="text" class="form-control" formControlName="author">
+    </div>
+    <div class="form-group">
+      <label>Description:</label>
+      <input type="text" class="form-control" formControlName="description">
+    </div>
+    <button type="submit" (click)="deleteBook(id)" class="btn btn-primary">Submit</button>
+  </form>
+</div>
